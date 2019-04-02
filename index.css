@@ -1,0 +1,312 @@
+*{
+    margin:0;
+    padding:0;
+    background:#12130F;
+    color:white;
+    font-family: 'Germania One', cursive;
+}
+
+header{
+    font-size: 50px;
+    text-align: center;
+}
+
+#card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    height: 40vh;
+    width: 40vh;
+    background:#12130F;
+    border-radius: 6px;
+    margin: 30px;
+    box-shadow: 5px 10px 20px 5px #5B9279;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#change-font-color{
+    transition: .3s;
+}
+
+#change-font-color:hover{
+    color:#8F8073;
+}
+
+@keyframes transform{
+    0% {
+        border-radius: 0%;
+        background:#8FCB9B;
+    }
+    50% {
+        border-radius: 50%;
+        background:#EAE6E5;
+    }
+    100% {
+        border-radius: 0%;
+        background:#8FCB9B;
+    }
+}
+
+#transform{
+    height:20vh;
+    width:20vh;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes inner-transform{
+    0% {
+        border-radius: 50%;
+        background:#5B9279;
+    }
+    50% {
+        border-radius: 0%;
+        background:#12130F;
+    }
+    100% {
+        border-radius: 50%;
+        background:#5B9279;
+    }
+}
+
+#inner-transform{
+    height:10vh;
+    width:10vh;
+    animation-name: inner-transform;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translate(-19vh,0)
+    }
+    25%{
+        transform: translate(0,19vh)
+    }
+    50%{
+        transform: translate(19vh,0)
+    }
+    75%{
+        transform: translate(0,-19vh)
+    }
+    100%{
+        transform: translate(-19vh,0)
+    }
+}
+
+@keyframes bounce2{
+    0%{
+        transform: translate(-19vh,-19vh)
+    }
+    25%{
+        transform: translate(19vh,-19vh)
+    }
+    50%{
+        transform: translate(19vh,19vh)
+    }
+    75%{
+        transform: translate(-19vh,19vh)
+    }
+    100%{
+        transform: translate(-19vh,-19vh)
+    }
+}
+
+@keyframes bounce3{
+    0%{
+        transform: translate(-19vh,-19vh)
+    }
+    50%{
+        transform: translate(19vh,19vh)
+    }
+    100%{
+        transform: translate(-19vh,-19vh)
+    }
+}
+@keyframes bounce4{
+    0%{
+        transform: translate(-19vh,19vh)
+    }
+    50%{
+        transform: translate(19vh,-19vh)
+    }
+    100%{
+        transform: translate(-19vh,19vh)
+    }
+}
+@keyframes bounce5{
+    0%{
+        transform: translate(19vh,-19vh)
+    }
+    50%{
+        transform: translate(-19vh,19vh)
+    }
+    100%{
+        transform: translate(19vh,-19vh)
+    }
+}
+@keyframes bounce6{
+    0%{
+        transform: translate(19vh,19vh)
+    }
+    50%{
+        transform: translate(-19vh,-19vh)
+    }
+    100%{
+        transform: translate(19vh,19vh)
+    }
+}
+
+.ball{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: translate(-19vh,0);
+    transition:.3s;
+    position: absolute;
+}
+
+.ball2{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform: translate(-19vh,-19vh);
+    transition:.3s;
+}
+
+.ball3{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform: translate(-19vh,-19vh);
+    transition:.3s;
+}
+
+.ball4{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform: translate(-19vh,-19vh);
+    transition:.3s;
+}
+
+.ball5{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce5;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform: translate(-19vh,-19vh);
+    transition:.3s;
+}
+
+.ball6{
+    height:20px;
+    width:20px;
+    background: #EAE6E5;
+    border-radius: 50%;
+    animation: bounce6;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    transform: translate(-19vh,-19vh);
+    transition:.3s;
+}
+
+.ball:hover{
+    background:red;
+}
+
+#ball2,#ball8{
+    animation-delay: .1s
+}
+#ball3,#ball9{
+    animation-delay: .2s
+}
+#ball4,#ball10{
+    animation-delay: .3s
+}
+#ball5,#ball11{
+    animation-delay: .4s
+}
+#ball6,#ball12{
+    animation-delay: .5s
+}
+
+iframe{
+    width:40vh;
+    height:auto;
+}
+
+#bg-pic-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg-pic{
+    width:20vh;
+    height:20vh;
+}
+
+#pic1{
+    border-radius:6px 0 0 0;
+    background: url(https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F03%2Fnew-dragon-ball-movie-this-year-01.jpg?q=75&w=800&cbr=1&fit=max);
+    background-position-x: -30px;
+    background-size: cover;
+}
+#pic2{
+    border-radius:0 6px 0 0;
+    background:url(https://media.comicbook.com/2017/03/dragon-ball-z-238094.jpg);
+    background-size: cover;
+    background-position-x: -50px;
+}
+#pic3{
+    border-radius:0 0 0 6px;
+    background: url(https://cdn.shopify.com/s/files/1/1222/3190/products/goku_super_saiyan_poster_from_dragon_ball_z_anime_in_India_By_Silly_Punter_c0b3c718-5c2a-4ab0-a5b7-b9ca1aca0c2b.jpg?v=1489314526);
+    background-size: cover;
+    background-position-y: -50px;
+}
+#pic4{
+    border-radius:0 0 6px 0;
+    background: url(https://cdn.shopify.com/s/files/1/0747/3829/products/mGR0001_1024x1024.jpeg?v=1485013711);
+    background-size: cover;
+    background-position-x: -30px;
+}
