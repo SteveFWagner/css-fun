@@ -8,12 +8,16 @@
 
 header{
     font-size: 50px;
-    text-align: center;
+    position:fixed;
+    top:0;
+    right:40%;
+    background:none;
 }
 
 #card-container{
     display: flex;
     flex-wrap: wrap;
+    margin-top:50px;
 }
 
 .card{
@@ -28,12 +32,20 @@ header{
     align-items: center
 }
 
-#change-font-color{
+#hover-container{
+    display:flex;
+    flex-direction: column;
+}
+
+div>h1, div>h2{
     transition: .3s;
 }
 
-#change-font-color:hover{
+div>h1:hover{
     color:#8F8073;
+}
+div>h2:hover{
+    color:red;
 }
 
 @keyframes transform{
@@ -271,7 +283,7 @@ header{
     animation-delay: .5s
 }
 
-iframe{
+div+iframe{
     width:40vh;
     height:auto;
 }
@@ -309,4 +321,46 @@ iframe{
     background: url(https://cdn.shopify.com/s/files/1/0747/3829/products/mGR0001_1024x1024.jpeg?v=1485013711);
     background-size: cover;
     background-position-x: -30px;
+}
+
+.card2{
+    height: 40vh;
+    width: 40vh;
+    background:#12130F;
+    border-radius: 6px;
+    margin: 30px;
+    box-shadow: 5px 10px 20px 5px #5B9279;
+
+}
+
+#float{
+    width:10vh;
+    height:10vh;
+    display:block;
+    float:right;
+    margin-top:10vh;
+    background:linear-gradient(203deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 15%, rgba(251,239,0,1) 30%, rgba(5,251,4,1) 45%, rgba(4,246,198,1) 60%, rgba(3,12,241,1) 75%, rgba(115,2,244,1) 89%, rgba(246,44,238,1) 100%);
+}
+
+#float2{
+    width:10vh;
+    height:10vh;
+    display:block;
+    float:left;
+    margin-top:10vh;
+    background:linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 15%, rgba(251,239,0,1) 30%, rgba(5,251,4,1) 45%, rgba(4,246,198,1) 60%, rgba(3,12,241,1) 75%, rgba(115,2,244,1) 89%, rgba(246,44,238,1) 100%);
+}
+
+#float-title{
+    text-align: center
+}
+
+#list-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#end-img{
+    width: 30vh;
+    height: auto;
 }
